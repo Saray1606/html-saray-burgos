@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       var carta = document.createElement('img');
       carta.setAttribute('src', 'images/reverso.png');
-      carta.set
+     
+      carta.setAttribute('data-id', i);
+      carta.addEventListenner('click', voltearCarta);
 
+      cuadricula.appendChild(carta);
+    }
+  }
 });
