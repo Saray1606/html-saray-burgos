@@ -43,5 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       cuadricula.appendChild(carta);
     }
+});
+
+function voltearCarta() {
+  var cardId = this.getAttribute("data-id");
+  cartasEscogidas.push(carAdj[cardId].name);
+  cartasEscogidasId.push(cardId);
+  this.setAttribute("src", cardAdj[cardId].img);
+  if (cartasEscogidas.length === 2) {
+    setTimeout(VERIFICARpAREJA,1000);
   }
+}
+   crearTablero();
 });
