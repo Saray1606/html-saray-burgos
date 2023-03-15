@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       var carta = document.createElement("img");
       carta.setAttribute("src", "img/reverso.png");
       carta.setAttribute("data-id", i);
-      carta.addEventListenner("click", voltearCarta);
+      carta.addEventListener("click", voltearCarta);
       cuadricula.appendChild(carta);
     }
   }
@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cartasEscogidas.push(cardsAdj[cardId].name);
     cartasEscogidasId.push(cardId);
     this.setAttribute("src", cardsAdj[cardId].img);
-    if (cartasEscogidas.length === 2) {
-      setTimeout(verificarPareja, 1500);
+    if (cartasEscogidas.lenght === 2) {
+      setTimeout(verificarPareja, 1000);
     }
   }
   crearTablero();
